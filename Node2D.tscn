@@ -1,74 +1,38 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://NinePatchRect.gd" type="Script" id=1]
-[ext_resource path="res://image.png" type="Texture" id=2]
+[ext_resource path="res://addons/NinePatchTexture/NinePatchTexture.gd" type="Script" id=1]
+[ext_resource path="res://addons/NinePatchTexture/icon_nine_patch_rect.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
-margin_right = 800.0
-margin_bottom = 600.0
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 30.0
+margin_top = 100.0
+margin_right = 430.0
+margin_bottom = 500.0
+texture = ExtResource( 2 )
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -320.0
-margin_top = -239.5
-margin_right = 320.0
-margin_bottom = 239.5
-texture = ExtResource( 2 )
-patch_margin_left = 100
-patch_margin_top = 100
-patch_margin_right = 100
-patch_margin_bottom = 100
+[node name="NinePatchTexture" type="Control" parent="."]
+margin_left = 500.0
+margin_top = 100.0
+margin_right = 902.0
+margin_bottom = 502.0
+rect_min_size = Vector2( 5, 5 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="NarrowTest" type="Button" parent="Control"]
-margin_right = 137.0
-margin_bottom = 20.0
-hint_tooltip = "#This Is Error.
-#When the Rect size is smaller than the original image size:
-#The border has been reduced and the pixels are completely distorted."
-custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
-text = "Size<640x479-Error"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="NormalTest" type="Button" parent="Control"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -81.0
-margin_right = 81.0
-margin_bottom = 20.0
-hint_tooltip = "#Original Image Size :640x479"
-text = "Size=640x479-Normal"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ZoomTest" type="Button" parent="Control"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -161.0
-margin_bottom = 20.0
-hint_tooltip = "#This Is Nomal.
-#When the Rect size is larger than the original image size."
-text = "Size>640x479-Zoom"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="Control/NarrowTest" to="Control/NinePatchRect" method="_on_ErrorTest_pressed"]
-[connection signal="pressed" from="Control/NormalTest" to="Control/NinePatchRect" method="_on_NormalTest_pressed"]
-[connection signal="pressed" from="Control/ZoomTest" to="Control/NinePatchRect" method="_on_ZoomTest_pressed"]
+texture = ExtResource( 2 )
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2

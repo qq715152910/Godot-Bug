@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/image.png-2de165adb17dfebcee8a7cd6c9833936.stex"
+path="res://.import/icon_nine_patch_rect.png-051179b912d80b272447d90bf9792cde.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image.png"
-dest_files=[ "res://.import/image.png-2de165adb17dfebcee8a7cd6c9833936.stex" ]
+source_file="res://addons/NinePatchTexture/icon_nine_patch_rect.png"
+dest_files=[ "res://.import/icon_nine_patch_rect.png-051179b912d80b272447d90bf9792cde.stex" ]
 
 [params]
 

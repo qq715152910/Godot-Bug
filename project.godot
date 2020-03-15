@@ -19,9 +19,9 @@ config/name="Nine Patch Rect Error Test"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
-[display]
+[editor_plugins]
 
-window/size/width=800
+enabled=PoolStringArray( "NinePatchTexture" )
 
 [rendering]
 
