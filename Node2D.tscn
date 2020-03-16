@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://addons/NinePatchTexture/NinePatchTexture.gd" type="Script" id=1]
 [ext_resource path="res://addons/NinePatchTexture/icon_nine_patch_rect.png" type="Texture" id=2]
+[ext_resource path="res://big_bg.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="NinePatchRect1" type="NinePatchRect" parent="."]
+visible = false
 margin_left = 30.0
 margin_top = 100.0
 margin_right = 430.0
@@ -21,7 +23,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchTexture" type="Control" parent="."]
+[node name="NinePatchTexture1" type="Control" parent="."]
+visible = false
 margin_left = 500.0
 margin_top = 100.0
 margin_right = 902.0
@@ -36,3 +39,33 @@ patch_margin_left = 2
 patch_margin_top = 2
 patch_margin_right = 2
 patch_margin_bottom = 2
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 463.0
+margin_bottom = 555.0
+texture = ExtResource( 3 )
+patch_margin_left = 50
+patch_margin_top = 50
+patch_margin_right = 50
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchTexture2" type="Control" parent="."]
+margin_left = 500.0
+margin_top = 100.0
+margin_right = 863.0
+margin_bottom = 555.0
+rect_min_size = Vector2( 101, 101 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+texture = ExtResource( 3 )
+patch_margin_left = 50
+patch_margin_top = 50
+patch_margin_right = 50
+patch_margin_bottom = 50
